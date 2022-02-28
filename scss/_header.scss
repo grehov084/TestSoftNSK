@@ -1,0 +1,292 @@
+.page {
+
+		// .page__header
+
+		&__header {
+            position: fixed;
+            height: 100px;
+            z-index: 1;
+		}
+}
+.header {
+
+    // .header__content
+
+    &__content {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: inherit;
+        background: rgba(16, 16, 29, 0.9);
+    }
+
+    // .header__column-link
+
+    &__column-link {
+        text-decoration: none;
+        color: #FFFFFF;
+
+    }
+    // .header__column-label
+
+    &__column-label {
+        position: absolute;
+        width: 247px;
+        height: 35px;
+        left: 19%;
+        top: 33.5px;
+
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 33px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
+
+    // .header__column-menu
+
+    &__column-menu {
+        color: #FFFFFF;
+    }
+}
+.column-header {
+
+    // .column-header__label-last
+
+    &__label-last {
+        color: #3E9CDC;
+    }
+}
+.menu {
+
+    // .menu__body
+
+    &__body {
+        position: absolute;
+        width: 435px;
+        height: 16px;
+        left: 59%;
+        top: 27.5px;
+    }
+
+    // .menu__list
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0px;
+    }
+
+    // .menu__item
+
+    &__item{
+        display: flex;
+        padding: 0 33px;
+    }
+
+    // .menu__link-business
+
+    &__link-business {
+        position: static;
+        width: 52px;
+        height: 16px;
+        left: 0px;
+        top: 0px;
+        font-family: Lato, sans-serif;
+        font-style: Semibold;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        text-decoration: none;
+        align-items: center;
+        text-align: right;
+        text-transform: uppercase;
+        color: #fff;
+        &:hover{
+            color: #43ABF0;
+            transition: $transition;
+        }
+        
+    }
+
+    // .menu__link-about
+
+    &__link-about {
+        position: static;
+        width: 42px;
+        height: 16px;
+        left: 112px;
+        top: 0px;
+        text-decoration: none;
+        font-family: Lato, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        &:hover{
+            color: #43ABF0;
+            transition: $transition;
+        }
+
+    }
+
+    // .menu__link-price
+
+    &__link-price {
+        position: static;
+        width: 40px;
+        height: 16px;
+        left: 213px;
+        top: 0px;
+        text-decoration: none;
+        font-family: Lato, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        &:hover{
+            color: #43ABF0;
+            transition: $transition;
+        }
+
+    }
+
+    // .menu__link-make-order
+
+    &__link-make-order {
+        position: static;
+        width: 124px;
+        height: 16px;
+        left: 313px;
+        top: 0px;
+        text-decoration: none;
+        font-family: Lato, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        text-transform: uppercase;     
+        color: #FFFFFF;
+
+        &:hover{
+            color: #43ABF0;
+            transition: $transition;
+        }
+
+    }
+}
+
+.adaptive-menu {
+
+        display: none;
+		// .menu__btn
+
+		&__btn {
+            display: flex; 
+            align-items: center;  
+            position: absolute;
+            top: 37px;
+            right: 20px;  
+            width: 26px;
+            height: 26px;  cursor: pointer;
+            z-index: 1;
+		}
+
+		// .menu__btn-item
+
+		&__btn-item {
+            display: block;
+            position: absolute;  width: 100%;
+            height: 2px;  background-color: #616161;
+    
+
+
+            &::before{
+                display: block;
+                position: absolute;  width: 100%;
+                height: 2px;  background-color: #616161;
+
+                content: '';
+                top: -8px;
+            }
+
+            &::after{
+                display: block;
+                position: absolute;  width: 100%;
+                height: 2px;  background-color: #616161;
+
+                content: '';
+                top: 8px;
+            }
+		}
+
+		// .menu__box
+
+		&__box {
+            display: block;
+            position: fixed;
+            visibility: hidden;
+            top: 0; 
+            width: 100%;
+            height: 130px;  
+            margin: 0;
+            padding: 80px 0;  list-style: none;
+            background-color: rgba(16, 16, 29, 0.9);
+            color: #ffff;
+            box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+		}
+
+		// .menu__item
+
+		&__item {
+            display: block;
+            padding: 12px 24px;  color: #fff;  
+            font-family: Lato;
+            font-size: 13px;
+            font-weight: 500;  
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 16px;
+            &:hover{
+                background-color: black;
+            }
+		}
+}
+#adaptive-menu__toggle {
+    opacity: 0;
+  }
+#adaptive-menu__toggle:checked ~ .adaptive-menu__btn > .adaptive-menu__btn-item {
+    transform: rotate(45deg);
+  }
+  #adaptive-menu__toggle:checked ~ .adaptive-menu__btn > .adaptive-menu__btn-item::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #adaptive-menu__toggle:checked ~ .adaptive-menu__btn > .adaptive-menu__btn-item::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #adaptive-menu__toggle:checked ~ .adaptive-menu__box {
+    visibility: visible;
+    left: 0;
+  }

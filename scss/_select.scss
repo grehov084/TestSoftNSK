@@ -1,0 +1,91 @@
+.new-select {
+    position: relative;
+    padding-left: 0 !important;
+    padding: 13px 15px;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+    background: url("../img/down.svg");
+    background-repeat: no-repeat;
+    background-position-y: 51%;
+    background-position-x: 100%;
+    background-size: 4%;
+}
+
+.new-select{
+    &__list {
+        position: absolute;
+        top: 45px;
+        left: 0;
+        cursor: pointer;
+        width: 100%;
+        z-index: 2;
+        background: rgba(39, 39, 51, 0.9);
+        border: 1px solid #3D4050;
+        box-sizing: border-box;
+        border-radius: 3px;
+        color: #fff;
+        user-select: none;
+        height: 200px;
+        overflow-y: scroll;
+        scrollbar-base-color: #3E9CDC;
+        scrollbar-color: #3D4050 #3D4050;
+        scrollbar-width: thin;
+           
+    }
+    &__list::-webkit-scrollbar{
+        background: #3D4050;
+        border-radius: 3px;
+        width: 7px;
+    }
+    &__list::-webkit-scrollbar-thumb{
+        background: #3E9CDC;
+        border-radius: 3px;
+        height: 53px;
+    }
+    &__list:-ms-scrollbar{
+        background: #3D4050;
+        border-radius: 3px;
+        width: 7px;
+    }
+    &__list:-ms-scrollbar-thumb{
+        background: #3E9CDC;
+        border-radius: 3px;
+        height: 53px;
+    }
+    &__list.on {
+        display: block;
+        width: 100%;
+    }
+    &__item span {
+        display: block;
+        padding: 10px 15px;
+        &:hover{
+            color: #42A9ED;
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 9px;
+        top: 9px;
+        background: url('path-to-image') no-repeat right center / cover;
+        opacity: 0.6;
+        transition: all .27s ease-in-out;
+        transform: rotate(0deg);
+    }
+    &.on:after {
+        transform: rotate(180deg);
+    }
+}
+.on{
+    background: url("../img/up.svg");
+    background-repeat: no-repeat;
+    background-position-y: 51%;
+    background-position-x: 100%;
+    background-size: 4%;
+}
